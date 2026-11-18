@@ -1,0 +1,6 @@
+interface:
+  display_name: "Local Figma Bridge"
+  short_description: "Create and edit Figma designs through your local bridge"
+  default_prompt: "Use $figma-local to inspect and edit the open Figma design, then verify the result visually."
+policy:
+  allow_implicit_invocation: true

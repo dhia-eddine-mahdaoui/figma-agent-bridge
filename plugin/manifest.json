@@ -1,0 +1,28 @@
+{
+  "name": "Figma Agent Bridge (Local)",
+  "id": "1689298915337694320",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": [
+    "figma"
+  ],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ],
+    "devAllowedDomains": [
+      "http://localhost:4318",
+      "http://localhost:4319",
+      "http://localhost:4320",
+      "http://localhost:4321",
+      "http://localhost:4322",
+      "http://localhost:4323",
+      "http://localhost:4324",
+      "http://localhost:4325",
+      "http://localhost:4326",
+      "http://localhost:4327"
+    ]
+  }
+}

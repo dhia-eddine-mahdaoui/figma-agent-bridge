@@ -1,0 +1,30 @@
+name: Bridge checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - run: node verify-package.mjs
+      - if: runner.os != 'Windows'
+        run: sh -n bootstrap.sh
+      - if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $parseTokens = $null; $parseErrors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'bootstrap.ps1'), [ref]$parseTokens, [ref]$parseErrors) | Out-Null
+          if ($parseErrors.Count) { throw ($parseErrors | Out-String) }

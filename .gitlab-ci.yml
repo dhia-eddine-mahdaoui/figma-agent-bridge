@@ -1,0 +1,15 @@
+image: node:24.19.0
+stages: [verify]
+verify-source:
+  stage: verify
+  script:
+    - node verify-syntax.mjs
+    - node run-tests.mjs
+    - sh -n bootstrap.sh
+    - node verify-package.mjs
+  artifacts:
+    when: on_success
+    expire_in: 14 days
+    paths:
+      - .local/verified-package/source/
+      - .local/verified-package/figma-local-bridge-windows.zip

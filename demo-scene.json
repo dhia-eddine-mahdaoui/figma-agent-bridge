@@ -1,0 +1,50 @@
+{
+  "type": "FRAME", "name": "Project overview", "width": 960, "height": 650,
+  "layout": "VERTICAL", "gap": 28, "padding": 40, "fill": "#F4F6FB", "cornerRadius": 24,
+  "children": [
+    { "type": "FRAME", "name": "Header", "layout": "HORIZONTAL", "gap": 24, "fill": "#F4F6FB", "sizingHorizontal": "FILL", "children": [
+      { "type": "FRAME", "name": "Heading", "layout": "VERTICAL", "gap": 8, "fill": "#F4F6FB", "sizingHorizontal": "FILL", "children": [
+        { "type": "TEXT", "name": "Eyebrow", "text": "WORKSPACE / OVERVIEW", "fontSize": 12, "fill": "#6366F1" },
+        { "type": "TEXT", "name": "Title", "text": "Make room for great work.", "fontSize": 32, "fontStyle": "Bold", "fill": "#172036" },
+        { "type": "TEXT", "name": "Subtitle", "text": "Your projects, people and progress in one place.", "fontSize": 14, "fill": "#69758C" }
+      ]},
+      { "type": "FRAME", "name": "New project button", "layout": "HORIZONTAL", "padding": 16, "cornerRadius": 10, "fill": "#5555E8", "children": [
+        { "type": "TEXT", "name": "Button label", "text": "+ New project", "fontSize": 14, "fill": "#FFFFFF" }
+      ]}
+    ]},
+    { "type": "FRAME", "name": "Metrics", "layout": "HORIZONTAL", "gap": 18, "fill": "#F4F6FB", "sizingHorizontal": "FILL", "children": [
+      { "type": "FRAME", "name": "Active projects", "layout": "VERTICAL", "gap": 12, "padding": 24, "cornerRadius": 16, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+        { "type": "TEXT", "text": "Active projects", "fontSize": 13, "fill": "#69758C" },
+        { "type": "TEXT", "text": "12", "fontSize": 36, "fontStyle": "Bold", "fill": "#172036" },
+        { "type": "TEXT", "text": "+3 this month", "fontSize": 12, "fill": "#23866D" }
+      ]},
+      { "type": "FRAME", "name": "Tasks completed", "layout": "VERTICAL", "gap": 12, "padding": 24, "cornerRadius": 16, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+        { "type": "TEXT", "text": "Tasks completed", "fontSize": 13, "fill": "#69758C" },
+        { "type": "TEXT", "text": "84", "fontSize": 36, "fontStyle": "Bold", "fill": "#172036" },
+        { "type": "TEXT", "text": "A productive week", "fontSize": 12, "fill": "#6366F1" }
+      ]},
+      { "type": "FRAME", "name": "Team members", "layout": "VERTICAL", "gap": 12, "padding": 24, "cornerRadius": 16, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+        { "type": "TEXT", "text": "Team members", "fontSize": 13, "fill": "#69758C" },
+        { "type": "TEXT", "text": "8", "fontSize": 36, "fontStyle": "Bold", "fill": "#172036" },
+        { "type": "TEXT", "text": "Working together", "fontSize": 12, "fill": "#69758C" }
+      ]}
+    ]},
+    { "type": "FRAME", "name": "Current projects", "layout": "VERTICAL", "gap": 22, "padding": 26, "cornerRadius": 16, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+      { "type": "TEXT", "text": "Current projects", "fontSize": 19, "fontStyle": "Bold", "fill": "#172036" },
+      { "type": "FRAME", "name": "Website refresh", "layout": "HORIZONTAL", "gap": 20, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+        { "type": "FRAME", "name": "Project details", "layout": "VERTICAL", "gap": 7, "fill": "#FFFFFF", "sizingHorizontal": "FILL", "children": [
+          { "type": "TEXT", "text": "Website refresh", "fontSize": 15, "fontStyle": "Bold", "fill": "#172036" },
+          { "type": "TEXT", "text": "Design system and launch experience", "fontSize": 13, "fill": "#69758C" }
+        ]},
+        { "type": "FRAME", "name": "Status badge", "layout": "HORIZONTAL", "padding": 10, "cornerRadius": 8, "fill": "#E9F6F0", "children": [
+          { "type": "TEXT", "text": "On track", "fontSize": 12, "fill": "#23866D" }
+        ]}
+      ]},
+      { "type": "RECTANGLE", "name": "Divider", "width": 828, "height": 1, "fill": "#EDF0F5", "sizingHorizontal": "FILL" },
+      { "type": "FRAME", "name": "Mobile experience", "layout": "VERTICAL", "gap": 7, "fill": "#FFFFFF", "children": [
+        { "type": "TEXT", "text": "Mobile experience", "fontSize": 15, "fontStyle": "Bold", "fill": "#172036" },
+        { "type": "TEXT", "text": "A better way to stay connected", "fontSize": 13, "fill": "#69758C" }
+      ]}
+    ]}
+  ]
+}

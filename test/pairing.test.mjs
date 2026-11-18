@@ -1,0 +1,34 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { once } from 'node:events';
+import { createBridge } from '../server.mjs';
+test('device approval requires a local form, hides tokens until approval and escapes file names',async t=>{
+  const {server,token}=createBridge(); server.listen(0,'127.0.0.1'); await once(server,'listening');
+  t.after(()=>{server.closeAllConnections();server.close();});
+  const port=server.address().port,base=`http://127.0.0.1:${port}`;
+  const post=async(path,data)=>{
+    const response=await fetch(base+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    return {status:response.status,data:await response.json()};
+  };
+  const ticket=(await post('/device/request',{session:'plugin-test',fileName:'<script>alert(1)</script>'})).data;
+  assert.ok(ticket.approvalUrl.startsWith(`http://localhost:${port}/device/approve/`));
+  assert.equal(ticket.token,undefined);
+  const before=await post('/device/poll',{ticket:ticket.ticket,pollSecret:ticket.pollSecret});
+  assert.deepEqual(before.data,{approved:false});
+  assert.equal((await post('/device/poll',{ticket:ticket.ticket,pollSecret:'bad'})).status,410);
+  const path=new URL(ticket.approvalUrl).pathname;
+  const page=await fetch(base+path); const html=await page.text();
+  assert.equal(page.headers.get('access-control-allow-origin'),null);
+  assert.equal(page.headers.get('referrer-policy'),'same-origin');
+  assert.ok(page.headers.get('content-security-policy').includes("frame-ancestors 'none'"));
+  assert.ok(html.includes('&lt;script&gt;')); assert.ok(!html.includes(token));
+  const csrf=html.match(/name="csrf" value="([a-f0-9]+)"/)[1];
+  const malicious=await fetch(base+path,{method:'POST',headers:{Origin:'https://attacker.example'},body:'csrf='+csrf});
+  assert.equal(malicious.status,403);
+  const wrong=await fetch(base+path,{method:'POST',headers:{Origin:`http://localhost:${port}`},body:'csrf=bad'});
+  assert.equal(wrong.status,403);
+  const approval=await fetch(base+path,{method:'POST',headers:{Origin:`http://localhost:${port}`,'Content-Type':'application/x-www-form-urlencoded'},body:'csrf='+csrf});
+  assert.equal(approval.status,200);
+  const after=await post('/device/poll',{ticket:ticket.ticket,pollSecret:ticket.pollSecret});
+  assert.equal(after.data.token,token); assert.equal(after.data.approved,true);
+});

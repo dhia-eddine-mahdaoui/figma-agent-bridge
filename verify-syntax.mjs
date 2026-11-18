@@ -1,0 +1,13 @@
+import vm from 'node:vm';
+import { readFile } from 'node:fs/promises';
+import {BRIDGE_PORTS} from './connection.mjs';
+const plugin = await readFile(new URL('./plugin/code.js',import.meta.url),'utf8');
+new vm.Script(plugin,{ filename: 'plugin/code.js' });
+const html = await readFile(new URL('./plugin/ui.html',import.meta.url),'utf8');
+const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+new vm.Script(script,{ filename: 'plugin/ui.html inline script' });
+const manifest = JSON.parse(await readFile(new URL('./plugin/manifest.json',import.meta.url),'utf8'));
+if (manifest.main !== 'code.js' || manifest.ui !== 'ui.html' || manifest.documentAccess !== 'dynamic-page') throw new Error('Invalid plugin manifest');
+const expected=BRIDGE_PORTS.map(port=>'http://localhost:'+port);
+if(JSON.stringify(manifest.networkAccess.devAllowedDomains)!==JSON.stringify(expected))throw new Error('Plugin discovery ports and manifest permissions differ');
+console.log('Plugin and UI JavaScript parse; manifest references verified.');

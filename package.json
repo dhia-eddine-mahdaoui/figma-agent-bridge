@@ -1,0 +1,20 @@
+{
+  "name": "figma-agent-bridge",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "mcp": "node mcp.mjs",
+    "test": "node run-tests.mjs",
+    "config": "node config.mjs",
+    "demo": "node demo.mjs",
+    "setup": "node setup.mjs",
+    "doctor": "node doctor.mjs",
+    "release": "node package-source.mjs",
+    "verify:package": "node verify-package.mjs",
+    "install:agent": "node install-agent.mjs",
+    "package:source": "node package-source.mjs"
+  }
+}

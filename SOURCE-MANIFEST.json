@@ -1,0 +1,262 @@
+{
+  "product": "figma-local-bridge",
+  "version": "0.4.0",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "10de090fb46c353c6bd844f1f0d575fc4c184eea4009056c3dc5048a9be1ecbe"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "bebf2617a4aba1facf1a7bf68365c2413e03ec1eff091be71d86d91165a93d34"
+    },
+    {
+      "path": "README.md",
+      "sha256": "744312fc9bfa597638ead4af86ebed61fcba6013a152ecd6d165f79486758b2d"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "229d683ae288b6eb8c394e40db4ab6dbaf1e088c8caacb8900f9a314c703c900"
+    },
+    {
+      "path": "USAGE.md",
+      "sha256": "37d912c7559d5c6ef1839c3633ede3cf00ab62bfc51e5d045cd94980340434f8"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "dd019121ae008babd6e2179db2c23d3dfabcb4dc9b14ca74436c98e2add99e8a"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "2b1653ade3142c901b0134cee96127387144a382fe940b48bbbbe165f2d3ab1f"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e5189ce5f041c8a8e11a6d03b1fc967f5bc5a6e474a54406096cc53175bc9e1e"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "f74ff8999b960422d30a030ad1d2138d490fbc4100725d69ac4b991521efc29b"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "5a89dfcbb749a4fde440662025b19045080104d8689b0c7399bab16518b9e730"
+    },
+    {
+      "path": "bootstrap.ps1",
+      "sha256": "09da4919d82e8de4101c2a3bbeeab5245e35c80306373333e37a707e479c084d"
+    },
+    {
+      "path": "bootstrap.sh",
+      "sha256": "8bab0b0145715f3ae9888b37d718f0a072f4f85568d593475c2e492a7105e070"
+    },
+    {
+      "path": "connect-ssh.ps1",
+      "sha256": "2398a231a5b98dc99b57cbba81327734dbec42b1386e4bc560251a3ae22ce07a"
+    },
+    {
+      "path": "Connect.cmd",
+      "sha256": "d6af050f8ca6b476311e4b1a00ac4df69ba8d5da72c6e26b946fd32d3b958a60"
+    },
+    {
+      "path": "desktop-bundle.mjs",
+      "sha256": "0c3bbcdd29f719e20981fa02393568b7f861a0b05972ea8fd608159b5702536e"
+    },
+    {
+      "path": "ssh-info.mjs",
+      "sha256": "0dd6bb86e8ed4f2bfceb3a742b7b489348457f77a92e5067539342f06cd104ba"
+    },
+    {
+      "path": "node-checksums.json",
+      "sha256": "bd63554533753c3277743598256718ee0071f7001832a3df3faf6cec44573c60"
+    },
+    {
+      "path": ".gitlab-ci.yml",
+      "sha256": "e926ecce80022f1fe40d617cdf5380db68fd9fd9f75a04e15e32a1fd124c8496"
+    },
+    {
+      "path": "install-agent.mjs",
+      "sha256": "d07668fafd726adf71d04cd7ca35a982af5e942fae111d618af2873c80c85b3d"
+    },
+    {
+      "path": "distribution-files.mjs",
+      "sha256": "ac6b6ae2cd6fbc71e41441b3cf5f10c462cfa118e6237b57bbf2701542d814c2"
+    },
+    {
+      "path": "package-source.mjs",
+      "sha256": "a7fe7a49fc8fafda6fc0af8dd8dd49030f10a80e33cc862bd549ebf769a25bce"
+    },
+    {
+      "path": "verify-package.mjs",
+      "sha256": "606808c23bb4468715b53c101f2241a899f38885d25cdeb0556557f48bcc7dc8"
+    },
+    {
+      "path": "run-tests.mjs",
+      "sha256": "0f23379492cbfbff5f68f364270932c58d9f09f0eab4e8c2ab3190e91c226f09"
+    },
+    {
+      "path": "paths.mjs",
+      "sha256": "3943a39b51343ab03fdfd09bd974387016d21c2fccbb2fed0adc6952505ba564"
+    },
+    {
+      "path": "connection.mjs",
+      "sha256": "f88604399c1dad95aae4d1805d0c44ac42c89b183e21697e2e040f9d305bac96"
+    },
+    {
+      "path": "runtime.mjs",
+      "sha256": "0fac1ddf2c852a873d7e83e72afd1797624cf480f923b9da52f6a13a0f63801b"
+    },
+    {
+      "path": "pairing.mjs",
+      "sha256": "a23143097268922183e31672c82ea79a532643ffa84ce7636c786bba4b6c2644"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "084776e0eb8cbd1f3a51c2d10b0ab02154a31581b970faa5f612ff4279e24589"
+    },
+    {
+      "path": "client.mjs",
+      "sha256": "c39172b83c6b468ef0b86242422f8db15d8c0148be9966c3db7801d1024b462f"
+    },
+    {
+      "path": "assets.mjs",
+      "sha256": "296417ad5e8130919c33647caaee95078d2aafb8e0ada6caba959df9ae8bf454"
+    },
+    {
+      "path": "mcp.mjs",
+      "sha256": "9b0f0016df22d22b981871a494be38c41472aac6e9fa0131ad6964f5d5dc31a2"
+    },
+    {
+      "path": "contracts.mjs",
+      "sha256": "dd9ae5be6a713d3fe22ab6481140fbf0cdf9619f29c2c6328001a94cb80c1bbd"
+    },
+    {
+      "path": "call.mjs",
+      "sha256": "58c9f951096a1a4778c50b2f3690bd5df9a220ed031f80fc6c25890b37058d71"
+    },
+    {
+      "path": "doctor.mjs",
+      "sha256": "5ce1d8910f6c5ad92d815afe8c71b5ffa5a4aff402fc86243631aaca342bce9d"
+    },
+    {
+      "path": "setup.mjs",
+      "sha256": "6ce5711f7c59324ffb014ea30478df75e09635b9ceaa4c9e5bf7ac4b5909f5da"
+    },
+    {
+      "path": "config.mjs",
+      "sha256": "6f7d16033a763a5d6f9cbddf2e078bdbba0675d0ad40efdf27df87422ad739a1"
+    },
+    {
+      "path": "verify-syntax.mjs",
+      "sha256": "620835aea0138e898d7c8fcc0a5481253f1f2390231665f5b727fc06d9010887"
+    },
+    {
+      "path": "demo.mjs",
+      "sha256": "4cd4f4a4980426478816b6f6aeb93298cbde0aa8147a11b6ecf7da02708288bb"
+    },
+    {
+      "path": "demo-scene.json",
+      "sha256": "71b67e3d958263e30d8b113ace7d941fd39cbb63929a1dd1bf08d6814dd1d7fa"
+    },
+    {
+      "path": "install.cmd",
+      "sha256": "bdb1a2f0061df51d9ff32eaadef5ca06fee3600d1cf94a980202dd47e1738f42"
+    },
+    {
+      "path": "start.cmd",
+      "sha256": "aded3b31651c2ae8ccf3a2e3793b369e74bd8809ec4b50321d34084b190b44e8"
+    },
+    {
+      "path": "plugin/manifest.json",
+      "sha256": "452b3dbbd432346f46708aafe46278cec4d361a38b7f6a5dfc989f278ab227a4"
+    },
+    {
+      "path": "plugin/code.js",
+      "sha256": "f42aa30a6573bfa794c194a8efc033f63ec08f9927800fe3f8bbf45846248930"
+    },
+    {
+      "path": "plugin/ui.html",
+      "sha256": "ce4a0697f90936ef00e9c0fddc9c93775d130f0132360569880b1d4d039d9fbf"
+    },
+    {
+      "path": "plugin/logo.svg",
+      "sha256": "3b84f5add4ed41b71826114d9184ad05aececf0b3c52694951a1f2bc5ecfacc1"
+    },
+    {
+      "path": "skills/figma-local/SKILL.md",
+      "sha256": "45efd4bca34ce640d83ac6997aa46a6f601df1333d4792f2323cbaf65014d1f5"
+    },
+    {
+      "path": "skills/figma-local/agents/openai.yaml",
+      "sha256": "96f0ade7fe5fe0475cb01d7f3638405170d167f6309587a6ff6b3bc909b2bf30"
+    },
+    {
+      "path": "test/bridge.test.mjs",
+      "sha256": "946e3a928471b5319ebc16da7836f146028dc522d2143ea6d04a8573f29a21e2"
+    },
+    {
+      "path": "test/ui.test.mjs",
+      "sha256": "025c31d7e0d447935ddbad3e3db981a72ada35a3975ae917f1f379f08eaef656"
+    },
+    {
+      "path": "test/pairing.test.mjs",
+      "sha256": "479c164bb2795b52b1970cd4c6e0b8f9842c3a623a3d930dd2ae91283914ec12"
+    },
+    {
+      "path": "test/runtime.test.mjs",
+      "sha256": "cb710c667d18322fd98b4e92a4f0122a720e2c74ca47d4aaf6e2a58cd4b98985"
+    },
+    {
+      "path": "test/setup.test.mjs",
+      "sha256": "39ad8e1b770f34138449c3cf3133b75f3eae8689b1d215d1f4f0c3e26f726ecb"
+    },
+    {
+      "path": "test/rtl.test.mjs",
+      "sha256": "d90149c7e0849e7f0d1dc51b0b2808f0052fb5e361ff39950e22ff9d86fd4d13"
+    },
+    {
+      "path": "test/recovery.test.mjs",
+      "sha256": "8e73720d60393ad8d6af727db62c78e3e6a9e3bb289aa945fe2901dd80445bef"
+    },
+    {
+      "path": "test/figma-fixture.mjs",
+      "sha256": "5a2004e16163b74e4f11be280260a7a97a892a9040f6b48897bcadd5375c1f34"
+    },
+    {
+      "path": "test/install-agent.test.mjs",
+      "sha256": "981d6cfed61d34e2b36da5f61cb51d4762813ca6de8ac2ad4429b000d0f6aef5"
+    },
+    {
+      "path": "test/extraction.test.mjs",
+      "sha256": "224322aa2ba31ad6dc98d601d8a6165ed9e4af568015dc4df6e16a11dc5993dd"
+    },
+    {
+      "path": "test/context-efficiency.test.mjs",
+      "sha256": "a7fd0e298aa8ed5c17012a46fbc830763c30d722e02578f9cb7ba78eb0562a7f"
+    },
+    {
+      "path": "test/connection.test.mjs",
+      "sha256": "ab920cc2e02b5d8959187fc5060444b74744df796d68836d23340dcf4c8f2f71"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "sha256": "9e57a58c2cc203725e43938263af9cab196125a9e0cb3ba25fc7a3f571877c60"
+    },
+    {
+      "path": "docs/figma-agent-bridge-demo.gif",
+      "sha256": "35f1b232c760ce84c3a4ace5f9cabadc947a024a2296d63c845a181056e0c501"
+    },
+    {
+      "path": "docs/figma-agent-bridge-demo.mp4",
+      "sha256": "bdcca04509dfb7f8bc3fa874de214661f16123bcd9d24c2742c908e51c41d9ee"
+    }
+  ],
+  "excluded": [
+    "credentials and session state",
+    "personal client configurations",
+    "local design captures",
+    "proprietary Figma extracts",
+    "research runtimes",
+    "Node download cache"
+  ]
+}
